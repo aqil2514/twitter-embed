@@ -1,0 +1,132 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #03051f;
+}
+
+.container {
+  display: grid;
+  position: relative;
+  transform: translateY(50%);
+  margin: 0 auto;
+  width: 50%;
+  background-color: #08007e;
+  border-radius: 1rem;
+  grid-template-areas:
+    "info"
+    "status"
+    "footer";
+}
+
+.info {
+  grid-area: "info";
+  display: flex;
+  flex-direction: row;
+}
+
+#image {
+  width: 92px;
+  height: 92px;
+  border-radius: 50%;
+  margin: 1rem;
+}
+
+#nameandsub {
+  margin-top: 2.5rem;
+  margin-right: 1rem;
+}
+
+#nameandsub h1 {
+  font-size: 26px;
+}
+
+#nameandsub h1 a {
+  color: white;
+  text-decoration: none;
+}
+
+#nameandsub p {
+  color: #817e7e;
+  font-style: italic;
+  font-weight: bold;
+  cursor: default;
+}
+
+#twitter-logo {
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  right: 50px;
+  top: 20px;
+  color: white;
+}
+
+.status {
+  grid-area: "status";
+  margin: 1rem 2rem;
+}
+
+.status p {
+  color: white;
+  line-height: 2;
+}
+
+.status p a {
+  color: white;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.status p a:hover {
+  color: blue;
+}
+
+.hashtag {
+  color: aqua;
+  cursor: pointer;
+}
+
+.footer {
+  grid-area: "footer";
+  display: flex;
+  flex-direction: row;
+  color: white;
+  margin: 1rem 2rem;
+}
+
+#like-count {
+  margin: 0.3rem 1rem;
+  cursor: default;
+}
+
+#time {
+  margin: 0.3rem;
+}
+
+.screen-eror {
+  display: none;
+  text-align: center;
+  color: red;
+  font-size: 32px;
+  font-weight: bold;
+  font-style: italic;
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+}
+
+@media (max-width: 1060px) {
+  .screen-eror {
+    display: flex;
+  }
+
+  .container {
+    display: none;
+  }
+}
